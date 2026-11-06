@@ -1,0 +1,6 @@
+{
+  "name": "Célébration Familiale — Gypsy & Grégoire",
+  "description": "Site d'invitation de prestige pour les 20 ans de mariage de Gypsy & Grégoire, les 50 ans de Gypsy et les anniversaires des enfants.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

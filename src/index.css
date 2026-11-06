@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-burgundy-surface: #381B20;
+    --color-burgundy-deep: #462329;
+    --color-burgundy-soft: #71323A;
+    --color-burgundy-wine: #76363D;
+    --color-burgundy-light: #84414A;
+    --color-ivory: #FFFDF8;
+    --color-cream: #F7F2EA;
+    --color-cream-light: #FAF6F0;
+    --color-gold-champagne: #C8A45D;
+    --color-gold-light: #E3C77A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FFFDF8;
+    color: #352528;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Prevent automatic zoom on input focus on iOS Safari */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  @media (min-width: 640px) {
+    input, select, textarea {
+      font-size: 0.875rem; /* 14px on sm+ */
+    }
+  }
+
+  img {
+    content-visibility: auto;
+  }
+}
+
+/* Unified Typographic System:
+   1. Cormorant Garamond: Regal French serif for headings, grand names, and celebratory titles
+   2. DM Sans: Clean, contemporary sans-serif for UI, buttons, body copy, dates, and form fields
+   3. Great Vibes: Refined romantic script for calligraphic flourishes and accent signatures
+*/
+.font-serif-cormorant,
+.font-serif {
+  font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-script,
+.font-cursive {
+  font-family: 'Great Vibes', 'Alex Brush', cursive;
+}
+
+/* Subtle Gold Text Gradient */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #C8A45D 0%, #E3C77A 50%, #B88E3D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hardware accelerated sections */
+section {
+  contain: layout style;
+}
+
+/* GPU Acceleration utility */
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduced motion accessibility fallback */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F2EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8A45D;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #71323A;
+}
